@@ -5,16 +5,16 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 // Collections
-import { Users } from './collections/Users'
-import { Operators } from './collections/Operators'
-import { BookableItems } from './collections/BookableItems'
-import { Guides } from './collections/Guides'
-import { SurfSpots } from './collections/SurfSpots'
-import { Media } from './collections/Media'
-import { CommunityMembers } from './collections/CommunityMembers'
-import { ImpactMetrics } from './collections/ImpactMetrics'
-import { PickupLocations } from './collections/PickupLocations'
-import { Bookings } from './collections/Bookings'
+import { Users } from './collections/Users.js'
+import { Operators } from './collections/Operators.js'
+import { BookableItems } from './collections/BookableItems.js'
+import { Guides } from './collections/Guides.js'
+import { SurfSpots } from './collections/SurfSpots.js'
+import { Media } from './collections/Media.js'
+import { CommunityMembers } from './collections/CommunityMembers.js'
+import { ImpactMetrics } from './collections/ImpactMetrics.js'
+import { PickupLocations } from './collections/PickupLocations.js'
+import { Bookings } from './collections/Bookings.js'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
