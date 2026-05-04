@@ -29,7 +29,7 @@ interface CalendarWidgetProps {
   /**
    * Callback when a booking is successfully created
    */
-  onBookingSuccess?: (bookingData: { uid: string; [key: string]: any }) => void
+  onBookingSuccess?: (bookingData: { uid?: string; [key: string]: any }) => void
 
   /**
    * Custom styling for the embed container
