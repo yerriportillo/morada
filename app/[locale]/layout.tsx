@@ -5,6 +5,9 @@ import { notFound } from 'next/navigation'
 import { locales } from '@/i18n'
 import '../globals.css'
 
+// Force dynamic rendering for all i18n routes to avoid headers() conflicts
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Morada — The platform for the small dwellings of El Salvador',
   description:
