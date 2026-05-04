@@ -7,14 +7,14 @@ import { PhotoCollage } from '@/components/sections/PhotoCollage'
 import { ProgramsSection } from '@/components/sections/ProgramsSection'
 
 interface RegresoPageProps {
-  params: {
+  params: Promise<{
     locale: string
     operatorSlug: string
-  }
+  }>
 }
 
-export default function RegresoPage({ params }: RegresoPageProps) {
-  const { operatorSlug, locale } = params
+export default async function RegresoPage({ params }: RegresoPageProps) {
+  const { operatorSlug, locale } = await params
   const t = useTranslations()
   const currentLocale = locale as 'es' | 'en'
 

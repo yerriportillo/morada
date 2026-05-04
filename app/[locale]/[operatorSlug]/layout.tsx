@@ -5,14 +5,14 @@ import { Footer } from '@/components/layout/Footer'
 
 interface OperatorLayoutProps {
   children: React.ReactNode
-  params: {
+  params: Promise<{
     locale: string
     operatorSlug: string
-  }
+  }>
 }
 
-export default function OperatorLayout({ children, params }: OperatorLayoutProps) {
-  const { operatorSlug, locale } = params
+export default async function OperatorLayout({ children, params }: OperatorLayoutProps) {
+  const { operatorSlug, locale } = await params
   const currentLocale = locale as 'es' | 'en'
 
   // Get operator data (mock for now)

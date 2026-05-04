@@ -8,14 +8,14 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 
 interface SpotPageProps {
-  params: {
+  params: Promise<{
     locale: string
     spotSlug: string
-  }
+  }>
 }
 
-export default function SurfSpotDetailPage({ params }: SpotPageProps) {
-  const { spotSlug, locale } = params
+export default async function SurfSpotDetailPage({ params }: SpotPageProps) {
+  const { spotSlug, locale} = await params
   const t = useTranslations()
   const currentLocale = locale as 'es' | 'en'
 

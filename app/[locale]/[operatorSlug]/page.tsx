@@ -10,14 +10,14 @@ import { CommunitySection } from '@/components/sections/CommunitySection'
 import { ImpactMetricsCounter } from '@/components/sections/ImpactMetricsCounter'
 
 interface OperatorPageProps {
-  params: {
+  params: Promise<{
     locale: string
     operatorSlug: string
-  }
+  }>
 }
 
-export default function OperatorPage({ params }: OperatorPageProps) {
-  const { operatorSlug, locale } = params
+export default async function OperatorPage({ params }: OperatorPageProps) {
+  const { operatorSlug, locale } = await params
   const t = useTranslations()
   const currentLocale = locale as 'es' | 'en'
 
