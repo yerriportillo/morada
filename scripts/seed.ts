@@ -167,7 +167,6 @@ async function seed() {
 
     // Initialize Payload
     await payload.init({
-      secret: process.env.PAYLOAD_SECRET || 'development-secret-key',
       local: true,
     })
 
