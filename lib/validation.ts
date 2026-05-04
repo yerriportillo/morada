@@ -61,8 +61,16 @@ export const validateHexColor = (value: string) => {
 /**
  * Validates URL slug (lowercase, hyphenated)
  */
-export const validateSlug = (value: string) => {
-  if (!value) return 'Slug es requerido / Slug is required'
+export const validateSlug = (value: string | string[] | null | undefined): string | true => {
+  if (!value || (Array.isArray(value) && value.length === 0)) {
+    return 'Slug es requerido / Slug is required'
+  }
+
+  // Handle array case (shouldn't happen for text fields, but TypeScript requires it)
+  const stringValue = Array.isArray(value) ? value[0] : value
+
+  if (!stringValue) return 'Slug es requerido / Slug is required'
+
   const slugRegex = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
-  return slugRegex.test(value) || 'Solo minúsculas y guiones (ej: puro-surf) / Only lowercase and hyphens (e.g., puro-surf)'
+  return slugRegex.test(stringValue) || 'Solo minúsculas y guiones (ej: puro-surf) / Only lowercase and hyphens (e.g., puro-surf)'
 }
