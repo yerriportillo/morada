@@ -1,0 +1,449 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "surfGuide": "Guía de Surf",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "book": "Reservar",
+    "backToHome": "Volver al Inicio"
+  },
+  "hero": {
+    "welcome": "Bienvenido a {operatorName}",
+    "exploreSalvador": "Explora El Salvador",
+    "findYourMorada": "Encuentra tu morada"
+  },
+  "cta": {
+    "bookNow": "Reservar Ahora",
+    "learnMore": "Conoce Más",
+    "viewPrograms": "Ver Programas",
+    "viewRooms": "Ver Habitaciones",
+    "viewTours": "Ver Tours",
+    "viewActivities": "Ver Actividades",
+    "contactUs": "Contáctanos",
+    "whatsappUs": "Escríbenos por WhatsApp",
+    "seeAvailability": "Ver Disponibilidad",
+    "reserve": "Reservar"
+  },
+  "booking": {
+    "form": {
+      "title": "Completa tu Reserva",
+      "guestDetails": "Información del Huésped",
+      "bookingDetails": "Detalles de la Reserva",
+      "paymentDetails": "Detalles de Pago",
+      "name": "Nombre Completo",
+      "namePlaceholder": "María García",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "maria@ejemplo.com",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+503 7123 4567",
+      "country": "País",
+      "countryPlaceholder": "El Salvador",
+      "language": "Idioma Preferido",
+      "selectDate": "Selecciona una Fecha",
+      "selectDateTime": "Selecciona Fecha y Hora",
+      "numGuests": "Número de Huéspedes",
+      "numGuestsPlaceholder": "2",
+      "specialRequests": "Solicitudes Especiales",
+      "specialRequestsPlaceholder": "Déjanos saber si tienes alguna necesidad especial...",
+      "regresoQuestion": "¿Estás regresando a El Salvador?",
+      "regresoHelper": "Marca esta casilla si eres salvadoreño/a viviendo en el extranjero"
+    },
+    "pricing": {
+      "subtotal": "Subtotal",
+      "deposit": "Depósito Requerido ({percent}%)",
+      "remaining": "Saldo Restante",
+      "tip": "Propina (Opcional)",
+      "tipHelper": "Las propinas apoyan {fundName}",
+      "total": "Total a Pagar Hoy",
+      "paymentDue": "Pago completo requerido antes de",
+      "pricePerPerson": "por persona",
+      "pricePerNight": "por noche"
+    },
+    "confirmation": {
+      "title": "¡Reserva Confirmada!",
+      "subtitle": "Hemos enviado los detalles de tu reserva a {email}",
+      "bookingId": "ID de Reserva",
+      "whatsappSent": "Te enviaremos una confirmación por WhatsApp a {phone}",
+      "nextSteps": "Próximos Pasos",
+      "receiptSent": "Recibo enviado por correo",
+      "reminderScheduled": "Recordatorio programado para {date}",
+      "contactOperator": "El operador te contactará pronto"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "confirmed": "Confirmada",
+      "paid": "Pagada",
+      "cancelled": "Cancelada",
+      "completed": "Completada"
+    },
+    "payment": {
+      "title": "Detalles de Pago",
+      "payNow": "Pagar Ahora",
+      "processing": "Procesando...",
+      "loading": "Cargando formulario de pago...",
+      "errorMessage": "El pago falló. Por favor, intenta de nuevo.",
+      "testMode": "Modo de Prueba",
+      "testModeHelper": "Usa la tarjeta de prueba 4242 4242 4242 4242",
+      "securePayment": "Pago seguro con Stripe"
+    }
+  },
+  "operatorTypes": {
+    "moradas_costeras": "Moradas Costeras",
+    "refugio": "Refugios",
+    "guia": "Guías",
+    "comunidad": "Comunidades",
+    "moradas_costeras_singular": "Morada Costera",
+    "refugio_singular": "Refugio",
+    "guia_singular": "Guía",
+    "comunidad_singular": "Comunidad"
+  },
+  "sections": {
+    "programs": "Programas de Surf",
+    "rooms": "Habitaciones",
+    "tours": "Tours",
+    "activities": "Actividades",
+    "guides": "Nuestros Instructores",
+    "about": "Acerca de Nosotros",
+    "gallery": "Galería",
+    "sustainability": "Sostenibilidad",
+    "community": "Nuestra Comunidad",
+    "impact": "Nuestro Impacto",
+    "location": "Ubicación",
+    "reviews": "Reseñas",
+    "contact": "Contacto",
+    "surfSpots": "Spots de Surf Cercanos"
+  },
+  "surf": {
+    "guide": {
+      "title": "Guía de Surf de El Salvador",
+      "subtitle": "Descubre los mejores spots de surf del país",
+      "filterByLevel": "Filtrar por Nivel",
+      "filterByRegion": "Filtrar por Región",
+      "filterByBreakType": "Filtrar por Tipo de Ola"
+    },
+    "spot": {
+      "breakType": "Tipo de Ola",
+      "skillLevel": "Nivel",
+      "bestSeason": "Mejor Época",
+      "bestTide": "Mejor Marea",
+      "crowdRating": "Factor de Multitud",
+      "getDirections": "Cómo Llegar",
+      "nearbyOperators": "Operadores Cercanos"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado",
+      "all": "Todos los Niveles"
+    },
+    "breakTypes": {
+      "point": "Point Break",
+      "beach": "Beach Break",
+      "reef": "Reef Break",
+      "river_mouth": "River Mouth"
+    },
+    "regions": {
+      "la_libertad": "La Libertad (Central)",
+      "eastern": "Costa Este",
+      "western": "Costa Oeste"
+    },
+    "tides": {
+      "low": "Marea Baja",
+      "mid": "Marea Media",
+      "high": "Marea Alta",
+      "all": "Todas las Mareas"
+    }
+  },
+  "regreso": {
+    "headline": "Vuelve a Casa",
+    "subheadline": "Para salvadoreños que regresan a sus raíces",
+    "intro": "Si creciste escuchando historias de El Salvador pero nunca has pisado su tierra, o si hace años que no regresas, esta experiencia es para ti.",
+    "cta": "Reserva con Orgullo",
+    "whyRegreso": "¿Por Qué Regreso?",
+    "benefits": {
+      "culturalConnection": "Conecta con tus raíces culturales",
+      "localGuides": "Guías que entienden tu historia",
+      "authenticExperience": "Experiencias auténticas, no turismo genérico",
+      "support": "Apoyas a comunidades salvadoreñas"
+    }
+  },
+  "common": {
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "clear": "Limpiar",
+    "apply": "Aplicar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "loading": "Cargando...",
+    "viewMore": "Ver Más",
+    "viewLess": "Ver Menos",
+    "readMore": "Leer Más",
+    "readLess": "Leer Menos",
+    "showAll": "Mostrar Todo",
+    "from": "Desde",
+    "to": "Hasta",
+    "duration": "Duración",
+    "capacity": "Capacidad",
+    "availability": "Disponibilidad",
+    "included": "Incluido",
+    "notIncluded": "No Incluido",
+    "whatToBring": "Qué Traer",
+    "days": "{count, plural, one {# día} other {# días}}",
+    "hours": "{count, plural, one {# hora} other {# horas}}",
+    "guests": "{count, plural, one {# huésped} other {# huéspedes}}",
+    "years": "{count, plural, one {# año} other {# años}}",
+    "yearsExperience": "{count} años de experiencia"
+  },
+  "footer": {
+    "tagline": "Turismo auténtico y sostenible en El Salvador",
+    "quickLinks": "Enlaces Rápidos",
+    "operators": "Operadores",
+    "forOperators": "Para Operadores",
+    "joinMorada": "Únete a Morada",
+    "help": "Ayuda",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "followUs": "Síguenos",
+    "builtWith": "Hecho con ❤️ en El Salvador",
+    "poweredBy": "Powered by Morada"
+  },
+  "contact": {
+    "getInTouch": "Ponte en Contacto",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "address": "Dirección",
+    "taxiInstructions": "Instrucciones para Taxi",
+    "sendMessage": "Enviar Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje aquí..."
+  },
+  "community": {
+    "meetTheTeam": "Conoce al Equipo",
+    "ourStory": "Nuestra Historia",
+    "role": "Rol",
+    "languages": "Idiomas",
+    "specialties": "Especialidades",
+    "certifications": "Certificaciones"
+  },
+  "impact": {
+    "title": "Nuestro Impacto",
+    "subtitle": "Medimos lo que importa",
+    "since": "Desde {year}",
+    "metricsUpdated": "Actualizado {date}"
+  },
+  "errors": {
+    "required": "Este campo es requerido",
+    "invalidEmail": "Correo electrónico inválido",
+    "invalidPhone": "Número de teléfono inválido",
+    "minLength": "Debe tener al menos {min} caracteres",
+    "maxLength": "No puede exceder {max} caracteres",
+    "genericError": "Algo salió mal. Por favor intenta de nuevo.",
+    "networkError": "Error de conexión. Verifica tu internet.",
+    "notFound": "Página no encontrada",
+    "unauthorized": "No autorizado",
+    "bookingFailed": "No se pudo completar la reserva. Por favor intenta de nuevo."
+  },
+  "validation": {
+    "bothLanguagesRequired": "Debes proporcionar contenido en español E inglés",
+    "spanishMissing": "Falta la versión en español",
+    "englishMissing": "Falta la versión en inglés"
+  },
+  "admin": {
+    "dashboard": "Panel de Control",
+    "myBookings": "Mis Reservas",
+    "myListings": "Mis Publicaciones",
+    "analytics": "Analíticas",
+    "settings": "Configuración",
+    "billing": "Facturación",
+    "logout": "Cerrar Sesión"
+  },
+  "reviews": {
+    "title": "Lo que dicen nuestros huéspedes",
+    "viewAllReviews": "Ver todas las reseñas",
+    "basedOn": "Basado en",
+    "reviews": "reseñas",
+    "loading": "Cargando reseñas...",
+    "noReviews": "No hay reseñas disponibles",
+    "showMore": "Mostrar más reseñas",
+    "showLess": "Mostrar menos"
+  },
+  "marketing": {
+    "hero": {
+      "headline": "La plataforma de turismo sostenible diseñada para El Salvador",
+      "subheadline": "Tu morada digital",
+      "description": "Conectamos operadores locales con viajeros auténticos. Desde surf camps hasta cooperativas comunitarias, Morada es la plataforma white-label que da voz a la historia de cada operador.",
+      "ctaPrimary": "Únete a Morada",
+      "ctaSecondary": "Conoce Más"
+    },
+    "operatorTypes": {
+      "title": "Diseñado para la Diversidad del Turismo Salvadoreño",
+      "subtitle": "Morada sirve a cuatro tipos de operadores, cada uno con su propia identidad y necesidades únicas.",
+      "moradasCosteras": {
+        "name": "Moradas Costeras",
+        "description": "Surf camps y escuelas de surf en la costa de El Salvador",
+        "features": [
+          "Gestión de programas de surf y clases",
+          "Integración con spots de surf locales",
+          "Booking de equipos y instructores",
+          "Sistema de niveles de habilidad"
+        ]
+      },
+      "refugio": {
+        "name": "Refugio",
+        "description": "Eco-lodges y alojamientos sostenibles",
+        "features": [
+          "Gestión de habitaciones y disponibilidad",
+          "Métricas de impacto ambiental",
+          "Certificaciones de sostenibilidad",
+          "Experiencias de ecoturismo"
+        ]
+      },
+      "guia": {
+        "name": "Guía",
+        "description": "Operadores de tours y experiencias guiadas",
+        "features": [
+          "Tours personalizables por región",
+          "Gestión de puntos de recogida",
+          "Perfiles de guías certificados",
+          "Itinerarios flexibles"
+        ]
+      },
+      "comunidad": {
+        "name": "Comunidad",
+        "description": "Cooperativas comunitarias y turismo de base",
+        "features": [
+          "Historias de miembros de la comunidad",
+          "Métricas de impacto social",
+          "Apoyo a economías locales",
+          "Preservación cultural"
+        ]
+      }
+    },
+    "regreso": {
+      "title": "Regreso: El Diferenciador Clave",
+      "subtitle": "La única plataforma con un módulo dedicado para salvadoreños en el extranjero",
+      "description": "Más de 2 millones de salvadoreños viven fuera de El Salvador. Morada ayuda a los operadores a conectar emocionalmente con la diáspora a través de landing pages personalizadas y tracking de conversiones.",
+      "features": [
+        {
+          "icon": "🇸🇻",
+          "title": "Landing Pages Personalizadas",
+          "description": "Cada operador puede crear una página /regreso con mensajes emocionales dirigidos a la diáspora."
+        },
+        {
+          "icon": "📊",
+          "title": "Tracking de Conversiones",
+          "description": "Mide cuántos visitantes 'regreso' se convierten en reservas reales."
+        },
+        {
+          "icon": "💚",
+          "title": "Narrativa Emocional",
+          "description": "Conecta con salvadoreños que quieren redescubrir su tierra natal de forma auténtica."
+        }
+      ],
+      "cta": "Activa el Módulo Regreso"
+    },
+    "operatorBenefits": {
+      "title": "Por Qué los Operadores Eligen Morada",
+      "subtitle": "Una plataforma diseñada específicamente para las necesidades del turismo salvadoreño",
+      "benefits": [
+        {
+          "icon": "🌐",
+          "title": "Tu Propio Sitio Web",
+          "description": "Morada es white-label. Tu marca, tu dominio, tu historia. Sin menciones de Morada para tus clientes."
+        },
+        {
+          "icon": "💰",
+          "title": "Sin Comisiones",
+          "description": "Modelo de suscripción mensual fija. No tomamos porcentaje de tus ventas."
+        },
+        {
+          "icon": "🇸🇻",
+          "title": "Bilingüe por Diseño",
+          "description": "Español e inglés con igual peso. Perfecto para mercados locales e internacionales."
+        },
+        {
+          "icon": "📅",
+          "title": "Calendario Integrado",
+          "description": "Integración nativa con Cal.com para gestión de disponibilidad y reservas."
+        },
+        {
+          "icon": "💳",
+          "title": "Pagos Simplificados",
+          "description": "Stripe Connect para depósitos automáticos. Tú controlas tus finanzas."
+        },
+        {
+          "icon": "📱",
+          "title": "WhatsApp Nativo",
+          "description": "Notificaciones automáticas por WhatsApp, el canal preferido en El Salvador."
+        }
+      ]
+    },
+    "travelerBenefits": {
+      "title": "La Experiencia para Viajeros",
+      "subtitle": "Encuentra experiencias auténticas en El Salvador, directamente de operadores locales",
+      "benefits": [
+        {
+          "icon": "✨",
+          "title": "Operadores Auténticos",
+          "description": "Conecta con operadores locales que viven y respiran El Salvador."
+        },
+        {
+          "icon": "🌊",
+          "title": "Guía de Surf Completa",
+          "description": "Descubre los 8 mejores surf spots con información detallada de nivel, marea y temporada."
+        },
+        {
+          "icon": "💬",
+          "title": "Soporte en Español",
+          "description": "Toda la plataforma disponible en español e inglés."
+        },
+        {
+          "icon": "🤝",
+          "title": "Turismo Responsable",
+          "description": "Apoya economías locales y turismo sostenible directamente."
+        },
+        {
+          "icon": "🏡",
+          "title": "Historias Reales",
+          "description": "Lee historias de primera mano de guías, artesanos y miembros de la comunidad."
+        },
+        {
+          "icon": "🔒",
+          "title": "Reservas Seguras",
+          "description": "Pagos seguros con Stripe y confirmación automática por WhatsApp."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Comienza Tu Morada Hoy",
+      "description": "Únete a los operadores que están transformando el turismo en El Salvador. Sin comisiones, sin ataduras.",
+      "ctaPrimary": "Crear Mi Cuenta",
+      "ctaSecondary": "Hablar con el Equipo",
+      "stats": [
+        {
+          "value": "4",
+          "label": "Tipos de Operadores"
+        },
+        {
+          "value": "$0",
+          "label": "Comisiones"
+        },
+        {
+          "value": "2+M",
+          "label": "Diáspora Salvadoreña"
+        },
+        {
+          "value": "100%",
+          "label": "White-Label"
+        }
+      ]
+    }
+  }
+}
