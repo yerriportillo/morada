@@ -34,28 +34,34 @@ export const requireBothLanguages = (value: any, { data }: any) => {
 /**
  * Validates email format
  */
-export const validateEmail = (value: string) => {
-  if (!value) return true // Optional field
+export const validateEmail = (value: string | string[] | null | undefined): string | true => {
+  if (!value || (Array.isArray(value) && value.length === 0)) return true // Optional field
+  const stringValue = Array.isArray(value) ? value[0] : value
+  if (!stringValue) return true
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(value) || 'Formato de email inválido / Invalid email format'
+  return emailRegex.test(stringValue) || 'Formato de email inválido / Invalid email format'
 }
 
 /**
  * Validates WhatsApp number (E.164 format)
  */
-export const validateWhatsApp = (value: string) => {
-  if (!value) return true // Optional field
+export const validateWhatsApp = (value: string | string[] | null | undefined): string | true => {
+  if (!value || (Array.isArray(value) && value.length === 0)) return true // Optional field
+  const stringValue = Array.isArray(value) ? value[0] : value
+  if (!stringValue) return true
   const e164Regex = /^\+[1-9]\d{1,14}$/
-  return e164Regex.test(value) || 'Usar formato E.164 (ej: +50312345678) / Use E.164 format (e.g., +50312345678)'
+  return e164Regex.test(stringValue) || 'Usar formato E.164 (ej: +50312345678) / Use E.164 format (e.g., +50312345678)'
 }
 
 /**
  * Validates hex color code
  */
-export const validateHexColor = (value: string) => {
-  if (!value) return true
+export const validateHexColor = (value: string | string[] | null | undefined): string | true => {
+  if (!value || (Array.isArray(value) && value.length === 0)) return true
+  const stringValue = Array.isArray(value) ? value[0] : value
+  if (!stringValue) return true
   const hexRegex = /^#[0-9A-Fa-f]{6}$/
-  return hexRegex.test(value) || 'Usar formato hex (#1A6B8A) / Use hex format (#1A6B8A)'
+  return hexRegex.test(stringValue) || 'Usar formato hex (#1A6B8A) / Use hex format (#1A6B8A)'
 }
 
 /**
