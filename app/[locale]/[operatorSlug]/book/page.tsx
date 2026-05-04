@@ -92,8 +92,10 @@ export default function BookingPage() {
   const calNamespace = process.env.NEXT_PUBLIC_CAL_NAMESPACE
   const isCalEnabled = !!calNamespace
 
-  const handleCalBookingSuccess = (bookingData: { uid: string; [key: string]: any }) => {
-    setCalBookingUid(bookingData.uid)
+  const handleCalBookingSuccess = (bookingData: { uid?: string; [key: string]: any }) => {
+    if (bookingData.uid) {
+      setCalBookingUid(bookingData.uid)
+    }
     console.log('Cal.com booking created:', bookingData)
   }
 
