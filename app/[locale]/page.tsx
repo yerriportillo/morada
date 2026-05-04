@@ -1,4 +1,5 @@
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MarketingHero } from '@/components/marketing/MarketingHero'
@@ -7,9 +8,15 @@ import { RegresoFeatureSection } from '@/components/marketing/RegresoFeatureSect
 import { BenefitsSection } from '@/components/marketing/BenefitsSection'
 import { CallToActionSection } from '@/components/marketing/CallToActionSection'
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   const t = useTranslations()
-  const locale = useLocale()
 
   return (
     <>
