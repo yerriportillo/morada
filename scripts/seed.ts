@@ -166,9 +166,7 @@ async function seed() {
     console.log('Starting Morada seed script...')
 
     // Initialize Payload
-    await payload.init({
-      local: true,
-    })
+    await payload.init()
 
     console.log('Payload initialized successfully')
 
