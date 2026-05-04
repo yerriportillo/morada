@@ -9,6 +9,7 @@
 import payload from 'payload'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import config from '../payload.config.js'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -166,7 +167,7 @@ async function seed() {
     console.log('Starting Morada seed script...')
 
     // Initialize Payload
-    await payload.init()
+    await payload.init({ config })
 
     console.log('Payload initialized successfully')
 
