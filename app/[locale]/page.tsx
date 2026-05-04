@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { setRequestLocale } from 'next-intl/server'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -16,7 +16,7 @@ export default async function HomePage({
   const { locale } = await params
   setRequestLocale(locale)
 
-  const t = useTranslations()
+  const t = await getTranslations()
 
   return (
     <>
