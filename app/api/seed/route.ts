@@ -31,22 +31,22 @@ export async function POST(request: NextRequest) {
     const admin = await payload.create({
       collection: 'users',
       data: {
-        email: 'demo@morada.sv',
-        password: 'demo123456',
+        email: 'test@morada.sv',
+        password: 'test',
         role: 'admin',
       },
     })
 
     console.log('✅ Demo admin user created')
-    console.log('   Email: demo@morada.sv')
-    console.log('   Password: demo123456')
+    console.log('   Email: test@morada.sv')
+    console.log('   Password: test')
 
     return NextResponse.json({
       success: true,
       message: 'Demo admin user created successfully',
       credentials: {
-        email: 'demo@morada.sv',
-        password: 'demo123456',
+        email: 'test@morada.sv',
+        password: 'test',
         adminUrl: '/admin',
       },
     })
