@@ -42,7 +42,6 @@ export default buildConfig({
     user: 'users',
     meta: {
       titleSuffix: '— Morada',
-      ogImage: '/morada-og.png',
       description: 'Morada Admin - White-label tourism platform for El Salvador',
     },
     // Admin routes will be at /admin
