@@ -8,6 +8,9 @@ import { RegresoFeatureSection } from '@/components/marketing/RegresoFeatureSect
 import { BenefitsSection } from '@/components/marketing/BenefitsSection'
 import { CallToActionSection } from '@/components/marketing/CallToActionSection'
 
+// Force dynamic rendering for i18n routes
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage({
   params,
 }: {
