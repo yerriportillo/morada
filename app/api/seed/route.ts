@@ -17,28 +17,9 @@ export async function POST(request: NextRequest) {
     const payload = await getPayload({ config })
 
     console.log('Payload initialized successfully')
-
-    // Ensure users_sessions table exists
-    console.log('Ensuring users_sessions table exists...')
-    try {
-      await payload.db.execute({
-        sql: `CREATE TABLE IF NOT EXISTS users_sessions (
-          id SERIAL PRIMARY KEY,
-          _order INTEGER,
-          _parent_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-          created_at TIMESTAMP DEFAULT NOW(),
-          expires_at TIMESTAMP
-        )`
-      })
-      console.log('users_sessions table ensured')
-    } catch (tableError: any) {
-      console.warn('Table creation warning:', tableError.message)
-      // Continue anyway - table might already exist
-    }
-
     console.log('Creating demo admin user...')
 
-    // Create demo admin user directly - Payload will handle duplicates
+    // Create demo admin user using local API to bypass some checks
     const admin = await payload.create({
       collection: 'users',
       data: {
@@ -47,6 +28,7 @@ export async function POST(request: NextRequest) {
         password: 'test',
         role: 'platform-admin',
       },
+      overrideAccess: true, // Bypass access control
     })
 
     console.log('✅ Demo admin user created successfully')
