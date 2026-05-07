@@ -17,30 +17,9 @@ export async function POST(request: NextRequest) {
     const payload = await getPayload({ config })
 
     console.log('Payload initialized successfully')
-
-    // Check if admin user already exists
-    let existingUsers
-    try {
-      existingUsers = await payload.find({
-        collection: 'users',
-        limit: 1,
-      })
-
-      if (existingUsers.totalDocs > 0) {
-        console.log('Database already seeded - users exist')
-        return NextResponse.json({
-          message: 'Database already seeded',
-          adminExists: true
-        })
-      }
-    } catch (findError: any) {
-      console.log('No existing users found (or table just created):', findError.message)
-      // Continue to create user - table might have just been created
-    }
-
     console.log('Creating demo admin user...')
 
-    // Create demo admin user
+    // Create demo admin user directly - Payload will handle duplicates
     const admin = await payload.create({
       collection: 'users',
       data: {
