@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
+import { Pool } from 'pg'
 
 export async function POST(request: NextRequest) {
+  const pool = new Pool({ connectionString: process.env.DATABASE_URL })
+
   try {
     // Simple security check - require a secret in production
     const { secret } = await request.json()
@@ -13,13 +16,27 @@ export async function POST(request: NextRequest) {
 
     console.log('Initializing Payload and database schema...')
 
-    // Initialize Payload - this will auto-create tables with push: true
+    // Initialize Payload - this will auto-create the users table with push: true
     const payload = await getPayload({ config })
 
     console.log('Payload initialized successfully')
+
+    //Create users_sessions table manually
+    console.log('Creating users_sessions table...')
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS users_sessions (
+        id SERIAL PRIMARY KEY,
+        _order INTEGER,
+        _parent_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        created_at TIMESTAMP DEFAULT NOW(),
+        expires_at TIMESTAMP
+      )
+    `)
+    console.log('users_sessions table created')
+
     console.log('Creating demo admin user...')
 
-    // Create demo admin user using local API to bypass some checks
+    // Now create the user through Payload
     const admin = await payload.create({
       collection: 'users',
       data: {
@@ -28,7 +45,7 @@ export async function POST(request: NextRequest) {
         password: 'test',
         role: 'platform-admin',
       },
-      overrideAccess: true, // Bypass access control
+      overrideAccess: true,
     })
 
     console.log('✅ Demo admin user created successfully')
@@ -61,5 +78,7 @@ export async function POST(request: NextRequest) {
       },
       { status: 500 }
     )
+  } finally {
+    await pool.end()
   }
 }
