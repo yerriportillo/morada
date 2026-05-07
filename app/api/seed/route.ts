@@ -44,15 +44,18 @@ export async function POST(request: NextRequest) {
     const admin = await payload.create({
       collection: 'users',
       data: {
+        name: 'Test Admin',
         email: 'test@morada.sv',
         password: 'test',
-        role: 'admin',
+        role: 'platform-admin',
       },
     })
 
     console.log('✅ Demo admin user created successfully')
+    console.log('   Name: Test Admin')
     console.log('   Email: test@morada.sv')
     console.log('   Password: test')
+    console.log('   Role: platform-admin')
     console.log('   Admin URL: /admin')
 
     return NextResponse.json({
