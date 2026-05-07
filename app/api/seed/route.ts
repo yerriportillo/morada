@@ -14,14 +14,29 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    console.log('Initializing Payload and database schema...')
+    console.log('Initializing database schema manually...')
 
-    // Initialize Payload - this will auto-create the users table with push: true
-    const payload = await getPayload({ config })
+    // Create users table first
+    console.log('Creating users table...')
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        role TEXT NOT NULL,
+        updated_at TIMESTAMP DEFAULT NOW(),
+        created_at TIMESTAMP DEFAULT NOW(),
+        email TEXT NOT NULL UNIQUE,
+        reset_password_token TEXT,
+        reset_password_expiration TIMESTAMP,
+        salt TEXT,
+        hash TEXT,
+        login_attempts INTEGER DEFAULT 0,
+        lock_until TIMESTAMP
+      )
+    `)
+    console.log('users table created')
 
-    console.log('Payload initialized successfully')
-
-    //Create users_sessions table manually
+    // Create users_sessions table
     console.log('Creating users_sessions table...')
     await pool.query(`
       CREATE TABLE IF NOT EXISTS users_sessions (
@@ -33,6 +48,11 @@ export async function POST(request: NextRequest) {
       )
     `)
     console.log('users_sessions table created')
+
+    // Now initialize Payload
+    console.log('Initializing Payload...')
+    const payload = await getPayload({ config })
+    console.log('Payload initialized successfully')
 
     console.log('Creating demo admin user...')
 
